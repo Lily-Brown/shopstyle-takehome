@@ -10,11 +10,13 @@
   
   <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
   <script src='assets/scripts/app.js'></script>
 </head>
-<body>
-  <div class='container'>
+<body ng-app='shopStyleApp'>
+  <div ng-controller='ShopStyleController' class='container'>
     <h1>Hello</h1>
+    <div id='change-me'>hello again</div>
   </div>
 </body>
 </html>
