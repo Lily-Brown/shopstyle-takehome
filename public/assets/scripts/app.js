@@ -25,6 +25,15 @@ var search = function() {
   });
 }
 
+// Populates page with data from query
 var displayData = function(data) {
-  
+  $('#data').empty();
+  var element = '';
+  for(var i=0; i<data.length; i++) {
+    element = "<div class='datum-" + data[i].id + "'></div>" +
+                "<p>" + data[i].tt + "</p>" +
+                "<p class='data-photo'><img src='" + data[i].i + "'></p>" +
+              "</div>";
+    $('#data').append(element);
+  }
 }
