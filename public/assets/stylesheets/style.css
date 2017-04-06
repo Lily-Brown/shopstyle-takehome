@@ -1,3 +1,88 @@
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 75%;
+  margin: 10vh auto 0 auto;
+  text-align: center;
+  border: 1px solid #B7B9BB;
+  border-radius: 5px;
+}
+
+#welcome-search, #filter-div, .data-photo {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#query-input, #lang-select {
+  font-size: 14px;
+  line-height: 2.5em;
+  padding-left: 10px;
+  border: 1px solid #B7B9BB;
+  border-radius: 5px;
+}
+
+#query-input {
+  width: 40%;
+}
+
 .data-photo img {
-  width: 300px;
+  max-width: 275px;
+}
+
+.data-photo {
+  display: inline-block;
+  width: 45%;
+}
+
+.data-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.datum, #welcome-search {
+  border-bottom: 1px solid #B7B9BB;
+}
+
+.first-letter {
+  text-transform: capitalize;
+}
+
+.title {
+  font-weight: bold;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  body h1{
+    font-size: 1.5em;
+  }
+
+  #welcome-search {
+    padding: 2%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  #query-input {
+    width: 75%;
+  }
+
+  .data-photo img {
+    width: 100%;
+  }
+
+  .data-photo, .data-info {
+    width: 100%;
+  }
+
 }

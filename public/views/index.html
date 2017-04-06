@@ -4,19 +4,28 @@
   <title>ShopStyle API</title>
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
 
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'>
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel='stylesheet' type='text/css' href='assets/stylesheets/style.css'>
   
   <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
   <script src='assets/scripts/app.js'></script>
 </head>
 <body>
   <div class='container'>
 
-    <h1>Type in the input box and start searching!</h1>
-    <input type='text' id='query-input'>
+    <div id='welcome-search'>
+      <h1 id='welcome-msg'>Type in the input box and start searching!</h1>
+      <input type='text' id='query-input'>
+    </div>
+    <div id='filter-div' hidden>
+      Language: 
+      <select id='lang-select' onchange='selectLanguage()'>
+        <option value='tt'>English
+        <option value='tf'>French
+        <option value='tj'>Japanese
+        <option value='te'>Spanish
+      </select>
+    </div>
 
     <div id='data'>
     </div>
