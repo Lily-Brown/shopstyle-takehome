@@ -18,13 +18,25 @@
       <input type='text' id='query-input'>
     </div>
     <div id='filter-div' hidden>
-      Language: 
-      <select id='lang-select' onchange='selectLanguage()'>
-        <option value='tt'>English
-        <option value='tf'>French
-        <option value='tj'>Japanese
-        <option value='te'>Spanish
-      </select>
+      <span class='title'>Filter By: </span>
+      <div class='select'>
+        Language:
+        <select id='lang-select' onchange='search()'>
+          <option value='tt'>English</option>
+          <option value='tf'>French</option>
+          <option value='tj'>Japanese</option>
+          <option value='te'>Spanish</option>
+        </select>
+      </div>
+      <div class='select'>
+        Type:
+        <select id='type-select' onchange='search()'>
+          <option value='all'>All</option>
+          <option value='film'>Film</option>
+          <option value='person'>Person</option>
+          <option value='series'>Series</option>
+        </select>
+      </div>
     </div>
 
     <div id='data'>

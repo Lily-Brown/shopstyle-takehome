@@ -20,7 +20,6 @@ var search = function() {
       success: function successCallback(response) {
         var data = response;
         displayData(data);
-        console.log(data);
       },
       error: function errorCallback(response) {
       console.log('There was an error getting the data', response);
@@ -36,7 +35,8 @@ var search = function() {
 // Populates page with data from query
 var displayData = function(data) {
   $('#data').empty();
-  var title;
+  var title,
+      type = $('#type-select')[0].value;
   if (data.length > 0) {
     var element = '';
     for(var i=0; i<data.length; i++) {
@@ -63,26 +63,23 @@ var displayData = function(data) {
       if (data[i].t === 'series') {
         episodeNumbers = " | <span class='episodes'>Episodes: " + data[i].e + "</span>"
       }
-      element = "<div class='datum'></div>" +
-                  "<div class='data-photo'>" + 
-                    "<img src='" + data[i].i + "'>" + 
-                  "</div>" +
-                  "<div class='data-info'>" +
-                    "<span class='title'>" + title + "</span>" +
-                    "<p>" + 
-                      "<span class='first-letter'>" + data[i].t + "</span>" +
-                      episodeNumbers +
-                    "</p>" + 
-                  "</div>" +
-                "</div>";
-      $('#data').append(element);
+      if (data[i].t === type || type === 'all') {
+        element = "<div class='datum'></div>" +
+                    "<div class='data-photo'>" +
+                      "<img src='" + data[i].i + "'>" +
+                    "</div>" +
+                    "<div class='data-info'>" +
+                      "<span class='title'>" + title + "</span>" +
+                      "<p>" +
+                        "<span class='first-letter'>" + data[i].t + "</span>" +
+                        episodeNumbers +
+                      "</p>" +
+                    "</div>" +
+                  "</div>";
+        $('#data').append(element);
+      }
     }
   } else {
     $('#no-results').show();
   }
-}
-
-// Filter by Language
-var selectLanguage = function() {
-  search();
 }

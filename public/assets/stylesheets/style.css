@@ -16,7 +16,7 @@ body {
   padding-top: 20px;
 }
 
-#query-input, #lang-select {
+#query-input, #lang-select, #type-select {
   font-size: 14px;
   line-height: 2.5em;
   padding-left: 10px;
@@ -26,6 +26,11 @@ body {
 
 #query-input {
   width: 40%;
+}
+
+.select {
+  display: inline-block;
+  padding-left: 1em;
 }
 
 .data-photo img {
@@ -82,6 +87,11 @@ body {
   }
 
   .data-photo, .data-info {
+    width: 100%;
+  }
+
+  .select {
+    padding-top: 5%;
     width: 100%;
   }
 
