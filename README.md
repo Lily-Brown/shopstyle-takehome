@@ -34,17 +34,27 @@ The necessary guidelines:
 
 ## UI Screenshot
 
-Screenshot Description
+Main Page
 
-<img src='http://i.imgur.com/REPLACE.jpg' width=500px>
+<img src='http://i.imgur.com/dfws9eO.png' width=500px>
+
+Search Results
+
+<img src='http://i.imgur.com/BSPOYWb.png' width=500px>
+
+Filtering by Language and Type
+
+<img src='http://i.imgur.com/b8EUhli.png' width=500px>
 
 
 ## Features
 
-- Feature One
-- Feature Two
+- Search Updates as the User Types
+- Allows User to Filter by Language
+- Allows User to Filter by Type
 
 ## Future Work
 
-- Thing I Would Like to Implement
-- Another Thing to Implement
+- More Interesting UI
+- 'Data Not Available' and other messages/labels appear in Filtered Language
+- Use Country Code to display Origin Country of data
