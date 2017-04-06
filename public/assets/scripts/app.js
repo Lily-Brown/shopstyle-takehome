@@ -36,7 +36,7 @@ var search = function() {
 var displayData = function(data) {
   $('#data').empty();
   var title,
-      type = $('#type-select')[0].value;
+      type = $('#type-select')[0].value || 'all';
   if (data.length > 0) {
     var element = '';
     for(var i=0; i<data.length; i++) {
